@@ -21,6 +21,10 @@ depositBtn.addEventListener('click', function () {
 withdrawBtn.addEventListener('click', function (){
    const withdraw = parseInt(withdrawInput.value);
    const withdrawMoney = parseInt(withdrawAmount.innerText);
+   if(withdraw > withdrawMoney){
+    alert('Baap er Bank e Taka Sesh');
+    return;
+   }
   
    withdrawAmount.innerText = withdrawMoney + withdraw ;
    totalAmount.innerText = parseInt(totalAmount.innerText) - withdraw;
