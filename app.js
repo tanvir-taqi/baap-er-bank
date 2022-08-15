@@ -11,6 +11,10 @@ const withdrawAmount = document.getElementById('withdraw-amount');
 depositBtn.addEventListener('click', function () {
         const deposit = parseInt(depositInput.value);
         const depositMoney = parseInt(depositAmount.innerText);
+        if(isNaN(deposit)){
+            alert("Please Enter a NUMBER");
+            return;
+        }
          
         depositAmount.innerText =  depositMoney + deposit;
         totalAmount.innerText = parseInt(totalAmount.innerText) + deposit;
@@ -25,6 +29,10 @@ withdrawBtn.addEventListener('click', function (){
     alert('Baap er Bank e Taka Sesh');
     return;
    }
+   if(isNaN(withdraw)){
+    alert("Please Enter a NUMBER");
+    return;
+}
   
    withdrawAmount.innerText = withdrawMoney + withdraw ;
    totalAmount.innerText = parseInt(totalAmount.innerText) - withdraw;
